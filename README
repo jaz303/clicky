@@ -1,0 +1,39 @@
+clicky
+	(c) 2008 Jason Frame
+
+== DESCRIPTION:
+
+clicky is a Ruby library for grabbing data from the Clicky web analytics API.
+
+== INSTALLATION:
+
+via RubyGems:
+
+  # gem install clicky
+
+== SOURCE:
+
+Hosted at GitHub; browse at:
+
+  http://github.com/jaz303/clicky.git
+
+Or clone from:
+
+  git@github.com:jaz303/clicky.git
+
+== USAGE:
+
+  require 'clicky'
+
+  Clicky.configure(:site_id => 1234, :sitekey => '12345678abcd')
+
+  clicky.actions_list(:date => 'yesterday').each do |action|
+    puts "#{action.title} => #{action.url}"
+  end
+
+Please see the rdoc for more information, or see the Clicky API docs at
+http://getclicky.com/help/api for a complete list of available reports.
+
+== CHANGELOG:
+
+  2008-06-11 - Initial commit to GitHub [0.5.0]
